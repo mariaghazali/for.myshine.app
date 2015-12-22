@@ -98,6 +98,6 @@ Lampornis,clemenciae,bird,8.4,,,8.2,23.5,,,large hummingbird
 Eugenes,fulgens,bird,7.4,,,8.4,24.7,,,large hummingbird
 Archilochus,alexandri,bird,3,,,7.1,23.5,,,small hummingbird
 Selasphorus,rufus,bird,3.3,,,7.4,33.6,,,small hummingbird
-Airbus A380,,tech,,,,7.8,663,,,
-Boeing 777,,tech,,,,8.67,567,,,
-Tu-134,,tech,,,,6.61,369.21,,,
+Airbus A380,,tech,,,,7.8,663,Airbus,,
+Boeing 777,,tech,,,,8.67,567,Boeing,,
+Tu-134,,tech,,,,6.61,369.21,Tu-134,,
