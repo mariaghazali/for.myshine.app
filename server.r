@@ -4,8 +4,8 @@ bat<-data.frame(
         x=c(0,  -29,  -60,  -74,  -66, -56, -51, -40, -36, -28, -25, -17, -11,  -7,  -4,  -2,  0),
         y=c(90, 94, 86, 61, 59, 54, 49, 52, 51, 44, 38, 38, 35, 31, 21, 15, 12))
 
-#urlfile<-'https://raw.githubusercontent.com/mariaghazali/for.myshine.app/master/wings.dataset.csv'
-urlfile<-"wings.dataset.csv"
+urlfile<-'https://raw.githubusercontent.com/mariaghazali/for.myshine.app/master/wings.dataset.csv'
+#urlfile<-"wings.dataset.csv" # if you download file in your local folder
 data.interpr<-read.csv(urlfile)
 bat.chull<-with(data.interpr,{data<-data.interpr[mamm=="bat",c("WL","AR")]; tmp<-data[chull(data$WL,data$AR),]; rbind(tmp,tmp[1,])})
 bird.chull<-with(data.interpr,{data<-data.interpr[mamm=="bird",c("WL","AR")]; tmp<-data[chull(data$WL,data$AR),]; rbind(tmp,tmp[1,])})
