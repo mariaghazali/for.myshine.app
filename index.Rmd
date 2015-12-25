@@ -1,0 +1,30 @@
+---
+title : Inquiry into flight performance
+subtitle : on example of creature made by you
+author : "Maria Ghazali"
+output : html_document
+runtime : shiny
+mode : selfcontained
+---
+
+## Problem summary
+Flight performance could be expressed by two wing characteristics - aspect ratio (AR) and wing loading (WL). Engineers can improve agility and maneuverability of winged creature by decreasing AR (like in forest raptors, hawks and long-eared bats). Otherwise they create robots with long and narrow winges (i.e. high AR), which are efficient in steady forward flight (like albatross or black mastiff bat). 
+
+Efficient soaring and gliding flight is available for birds and bats with high AR. More lift (higher wing loading) is produced by animals with faster flight. Thus, fast fliers could afford to have larger size, but they lost in maneuvarability of flight.
+
+In this application we will mimic [geometric morphometrics approach](https://en.wikipedia.org/wiki/Morphometrics).
+
+## Technical issues
+Application uses mouse clicking on the plot area to draw some outline and calculate aspect ratio and wing loading. In code it looks like this:
+```{r,eval=FALSE,echo=TRUE}
+plotOutput("plot", click = clickOpts(id = "plot_click")),
+```
+User interface is presented with tabset panel.
+Interpretation plot is drawn from the csv file deposited in [github rep](https://raw.githubusercontent.com/mariaghazali/for.myshine.app/master/wings.dataset.csv).
+
+## Embedded Application
+
+```{r, echo=FALSE}
+source("flight.app.r")
+flight.app(bat)
+```
